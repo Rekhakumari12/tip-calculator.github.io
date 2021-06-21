@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip calculator</title>
+  </head>
+  <body class="brown darken-3">
+    <div class="calculator z-depth-5 card-panel">
+      <div class="calculator_header grey darken-2">
+        <h4 class="white-text">TIP CALCULATOR</h4>
+      </div>
+      <div class="calculator_body">
+        <div class="bill">
+          <p>How much was your bill?</p>
+          <div class="bill_div">
+            <label for="doller">$</label>
+            <input type="number" placeholder="Bill Amount" id="billamt"/>
+          </div>
+        </div>
+        <div class="service">
+          <p>How was your service</p>
+          <div class="input-field col s12">
+            <select id="serviceQual">
+              <option value="" disabled selected>--Choose an option--</option>
+              <option value="0.3">30% - Outstanding</option>
+              <option value="0.25">25% - Great</option>
+              <option value="0.2">20% - Good</option>
+              <option value="0.15">15% - It was OK</option>
+              <option value="0.1">10% - Bad</option>
+              <option value="0.05">5% - Terrible</option>
+            </select>
+        </div>
+        <div class="sharing">
+          <p>How many people sharing the bill?</p>
+          <div class="people_div">
+            <input type="number" placeholder="Number of People" id="peopleamt" />
+            <label for="people">people</label>
+          </div>
+        </div>
+        <div class="btn_wrapper">
+          <button class="waves-effect waves-light btn grey darken-2 hoverable" id = "calculate" onclick="calculate()">CALCULATE!</button>
+        </div>
+        <div>
+          <p>TIP AMOUNT</p>
+          <h2 id="tipamount"></h2>
+          <p id="each"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("select").formSelect();
+      });
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>

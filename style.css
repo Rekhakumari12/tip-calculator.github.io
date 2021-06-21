@@ -1,0 +1,20 @@
+.calculator {
+  background-color: blanchedalmond;
+  width: 30rem;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calculator_header {
+  width: 100%;
+  text-align: center;
+}
+p {
+  font-weight: 500;
+}
+.btn_wrapper {
+  text-align: center;
+  margin: 20px auto;
+}
